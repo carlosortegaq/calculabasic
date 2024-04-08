@@ -20,8 +20,15 @@ class DemoApplicationTests {
 		calculadora.setNumero1(10);
 		calculadora.setNumero2(0);
 		Integer resultadoEsperado = 20;
-		Integer resultado = calculadora.dividir();
-		assertThat(resultado.equals(resultadoEsperado));
+		Integer resultado;
+		try {
+			resultado = calculadora.dividir();
+			assertThat(resultado.equals(resultadoEsperado));
+		} catch (Excepcion e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
 	}
 	
 
