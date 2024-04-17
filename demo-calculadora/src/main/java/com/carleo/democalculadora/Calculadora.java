@@ -33,7 +33,10 @@ public class Calculadora {
 		return this.numero1 * this.numero2;
 	}
 
-	public Integer dividir() {
+	public Integer dividir() throws Excepcion {
+		if(this.numero2.equals(0)) {
+			throw new Excepcion("No se puede dividir entre 0");
+		}
 		return this.numero1 / this.numero2;
 	}
 
