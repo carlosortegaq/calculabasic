@@ -17,9 +17,9 @@ class DemoApplicationTests {
 	@Test
 	void test() {
 		calculadora = new Calculadora();
-		calculadora.setNumero1(10);
-		calculadora.setNumero2(0);
-		Integer resultadoEsperado = 20;
+		calculadora.setNumero1(20);
+		calculadora.setNumero2(10);
+		Integer resultadoEsperado = 2;
 		Integer resultado;
 		try {
 			resultado = calculadora.dividir();
